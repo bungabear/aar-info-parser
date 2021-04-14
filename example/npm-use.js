@@ -11,6 +11,13 @@ apkInfoParser.parse().then(result => {
   console.log('err ----> ', e)
 })
 
+const arrInfoParser = new AppInfoParser('../packages/test.aar')
+arrInfoParser.parse().then(result => {
+  console.log('info ----> ', result)
+}).catch(e => {
+  console.log('err ----> ', e)
+})
+
 // AppInfoParser parse ipa
 const ipaInfoParser = new AppInfoParser('../packages/test.ipa')
 ipaInfoParser.parse().then(result => {
